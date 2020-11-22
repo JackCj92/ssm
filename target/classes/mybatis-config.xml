@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--二级缓存配置-->
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <!-- 全局别名设置，在映射文件中只需写别名，而不必写出整个类路径  -->
+    <typeAliases>
+        <package name="com.ssm.entity"/>
+    </typeAliases>
+
+    <!--  package name="映射文件所在包名"
+      必须保证接口名（例如PersonDao）和xml名（PersonDao.xml）相同，还必须在同一个包中  -->
+    <mappers>
+        <package name="com.ssm.dao"/>
+    </mappers>
+
+</configuration> 
